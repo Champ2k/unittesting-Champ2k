@@ -14,6 +14,9 @@ Write a table describing your test cases.
 | one item many times    |  list with 1 item   |
 | 2 items, many times, many orders | 2 item list, items in same order  |
 | what other test case?  |  what result?       |
+| only an integers       |  TypeError          |
+| not a list             |  NameError          |
+| only a string          |  list with 1 item of a alphabet  |
 
 
 ## Test Cases for Fraction
