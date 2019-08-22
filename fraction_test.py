@@ -64,7 +64,7 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(0,0), Fraction(1, 0)-Fraction(0, 0))
 
     def test_gt(self):
-        self.assertEqual(True, Fraction(1,12)>Fraction(2,3))
+        self.assertEqual(False, Fraction(1,12)>Fraction(2,3))
         self.assertEqual(True, Fraction(1,12)>Fraction(-2,3))
         self.assertEqual(False, Fraction(-1,2)>Fraction(50,10))
         self.assertEqual(True, Fraction(1, 0)>Fraction(-1, 0)) #Can't be calculated
