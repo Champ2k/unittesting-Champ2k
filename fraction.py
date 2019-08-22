@@ -14,7 +14,7 @@ class Fraction:
         """Initialize a new fraction with the given numerator
            and denominator (default 1).
         """
-        
+
         if not isinstance(numerator, int):
             raise TypeError
         elif not isinstance(denominator, int):
@@ -74,7 +74,7 @@ class Fraction:
         if self.denominator == 0 and frac.denominator == 0:
             return self.numerator > frac.numerator
         else:
-            return (self.numerator*self.denominator) > (frac.numerator*frac.denominator)
+            return (self.numerator*frac.denominator) > (frac.numerator*self.denominator)
     
     def __mul__(self, frac):
         numerator = (self.numerator*frac.numerator)
