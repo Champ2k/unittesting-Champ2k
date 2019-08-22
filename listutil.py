@@ -24,7 +24,6 @@ def unique(list):
             unique_list.append(i)
     return unique_list
 
-
 if __name__ == "__main__":
     """Run the doctests in all methods."""
     import doctest
