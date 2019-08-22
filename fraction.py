@@ -82,6 +82,7 @@ class Fraction:
         return Fraction(numerator, denominator)
 
     def __eq__(self, frac):
+        
         """Two fractions are equal if they have the same value.
            Fractions are stored in proper form so the internal representation
            is unique (3/6 is same as 1/2).
