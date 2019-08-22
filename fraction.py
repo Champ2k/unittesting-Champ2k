@@ -14,8 +14,7 @@ class Fraction:
         """Initialize a new fraction with the given numerator
            and denominator (default 1).
         """
-
-
+        
         if not isinstance(numerator, int):
             raise TypeError
         elif not isinstance(denominator, int):
@@ -59,7 +58,6 @@ class Fraction:
             return f"{self.numerator}"
         else:
             return f"{self.numerator}/{self.denominator}"
-        
 
     #TODO write __mul__ and __str__.  Verify __eq__ works with your code.
     #Optional have fun and overload other operators such as 

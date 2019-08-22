@@ -26,14 +26,18 @@ class FractionTest(unittest.TestCase):
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
 
-
     # TODO Write tests for __init__, __eq__, +, *.
     # Here is an example, but you must add more test cases.  
     # The test requires that your __eq__ is correct.
+
     def test_add(self):
         # 3/4 = 2/3 + 1/12
         self.assertEqual(Fraction(3,4), Fraction(1,12)+Fraction(2,3))
         self.assertEqual(Fraction(0,0), Fraction(1, 0)+Fraction(-1, 0))
+        self.assertEqual(Fraction(0,0), Fraction(1, 0)+Fraction(0, 0))
+        self.assertEqual(Fraction(0,0), Fraction(2, 0)+Fraction(1, 0))
+        self.assertEqual(Fraction(0,0), Fraction(0, 0)+Fraction(0, 0))
+        
 
     def test_eq(self):
         f = Fraction(1,2)
@@ -57,6 +61,7 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(3,4), Fraction(1,12)-Fraction(-2,3))
         self.assertEqual(Fraction(11,2), Fraction(1,2)-Fraction(-50,10))
         self.assertEqual(Fraction(0,0), Fraction(1, 0)-Fraction(-1, 0))
+        self.assertEqual(Fraction(0,0), Fraction(1, 0)-Fraction(0, 0))
 
     def test_gt(self):
         self.assertEqual(True, Fraction(1,12)>Fraction(2,3))
@@ -72,4 +77,12 @@ class FractionTest(unittest.TestCase):
         self.assertEqual(Fraction(3,4), Fraction(1,12)-Fraction(-2,3))
         self.assertEqual(Fraction(11,2), Fraction(1,2)-Fraction(-50,10))
         self.assertEqual(Fraction(0,0), Fraction(1, 0)-Fraction(-1, 0))
+    
+    def test_not_a_int(self):
+        with self.assertRaises(TypeError):
+            Fraction([1,2,3])
+        with self.assertRaises(TypeError):
+            Fraction({})
+        with self.assertRaises(TypeError):
+            Fraction("Hello")
         

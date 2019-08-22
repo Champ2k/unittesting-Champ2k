@@ -20,3 +20,20 @@ Write a table describing your test cases.
 
 
 ## Test Cases for Fraction
+| Test case              |  Expected Result    |
+|------------------------|---------------------|
+| test string            |  string of the fraction|
+| test add               |  object 1 + object 2|
+| 1/2 == 1/2             |  True               |
+| test sub               |  object 1 - object 2|
+| 1/2 > 1/3              |  True               |
+| test mul               |  object 1 * object 2|
+| 1/0 + 1/0              |  0/0                |
+| 0/0 + 0/0              |  0/0                |
+| 1/0 - (-1/0)           |  0/0                |
+| 0/0 - 0/0              |  0/0                |
+| 1/0 == -1/0            |  True               |
+| 0/0 == 0               |  False              |
+| 0/0 == 1/0 or -1/0     |  False              |
+| Not a integer          |  TypeError          |
+
