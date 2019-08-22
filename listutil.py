@@ -17,6 +17,7 @@ def unique(list):
     >>> unique([1,"a",1,"a",2,2,"b",1,"b"])
     [1, 'a', 2, 'b']
     """
+    
     unique_list = []
 
     for i in list:
