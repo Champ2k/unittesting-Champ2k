@@ -26,12 +26,14 @@ class FractionTest(unittest.TestCase):
         f = Fraction(99)
         self.assertEqual("99", f.__str__())
 
+
     # TODO Write tests for __init__, __eq__, +, *.
     # Here is an example, but you must add more test cases.  
     # The test requires that your __eq__ is correct.
     def test_add(self):
         # 3/4 = 2/3 + 1/12
         self.assertEqual(Fraction(3,4), Fraction(1,12)+Fraction(2,3))
+        self.assertEqual(Fraction(0,0), Fraction(1, 0)+Fraction(-1, 0))
 
     def test_eq(self):
         f = Fraction(1,2)
@@ -43,3 +45,31 @@ class FractionTest(unittest.TestCase):
         self.assertFalse(f.__eq__(h))
         #TODO write more tests using other cases.
         # Consider special values like 0, 1/0, -1/0
+        a = Fraction(1, 0)
+        b = Fraction(-1, 0)
+        c = Fraction(0,0)
+        self.assertFalse(a == b)
+        self.assertFalse(a == c)
+        self.assertTrue(0 != c) # (0/0 or Nan) != 0
+
+    def test_sub(self):
+        self.assertEqual(Fraction(-7,12), Fraction(1,12)-Fraction(2,3))
+        self.assertEqual(Fraction(3,4), Fraction(1,12)-Fraction(-2,3))
+        self.assertEqual(Fraction(11,2), Fraction(1,2)-Fraction(-50,10))
+        self.assertEqual(Fraction(0,0), Fraction(1, 0)-Fraction(-1, 0))
+
+    def test_gt(self):
+        self.assertEqual(True, Fraction(1,12)>Fraction(2,3))
+        self.assertEqual(True, Fraction(1,12)>Fraction(-2,3))
+        self.assertEqual(False, Fraction(-1,2)>Fraction(50,10))
+        self.assertEqual(True, Fraction(1, 0)>Fraction(-1, 0)) #Can't be calculated
+        self.assertEqual(True, Fraction(1, 0)>Fraction(0, 0))
+        self.assertEqual(False, Fraction(-1, 0)>Fraction(0, 0))
+        self.assertEqual(False, Fraction(0, 0)>Fraction(0, 0))
+
+    def test_mul(self):
+        self.assertEqual(Fraction(-7,12), Fraction(1,12)-Fraction(2,3))
+        self.assertEqual(Fraction(3,4), Fraction(1,12)-Fraction(-2,3))
+        self.assertEqual(Fraction(11,2), Fraction(1,2)-Fraction(-50,10))
+        self.assertEqual(Fraction(0,0), Fraction(1, 0)-Fraction(-1, 0))
+        
