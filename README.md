@@ -1,6 +1,6 @@
 ## Unit Testing Assignment
 
-by Wkrom Chanthakhun.
+by Wikrom Chanthakhun.
 
 
 ## Test Cases for unique
