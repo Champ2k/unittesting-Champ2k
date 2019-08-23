@@ -72,7 +72,13 @@ class Fraction:
     
     def __gt__(self, frac):
         if self.denominator == 0 and frac.denominator == 0:
-            return self.numerator > frac.numerator
+            if self.numerator != 0 or frac.numerator != 0:
+                if self.numerator == 1 and frac.numerator == -1:
+                    return True
+                else:
+                    return False
+            elif self.numerator == 0 and frac.numerator == 0:
+                return False
         else:
             return (self.numerator*frac.denominator) > (frac.numerator*self.denominator)
     
