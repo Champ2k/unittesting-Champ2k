@@ -1,5 +1,7 @@
 ## Unit Testing Assignment
 
+[![Build Status](https://travis-ci.com/Champ2k/unittesting-Champ2k.svg?branch=master)](https://travis-ci.com/Champ2k/unittesting-Champ2k)
+
 by Wikrom Chanthakhun.
 
 
