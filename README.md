@@ -1,6 +1,7 @@
 ## Unit Testing Assignment
 
 [![Build Status](https://travis-ci.com/Champ2k/unittesting-Champ2k.svg?branch=master)](https://travis-ci.com/Champ2k/unittesting-Champ2k)
+[![Build Status](https://codecov.io/gh/Champ2k/unittesting-Champ2k/branch/master/unittesting-Champ2k.svg))](https://codecov.io/gh/Champ2k/unittesting-Champ2k)
 
 by Wikrom Chanthakhun.
 

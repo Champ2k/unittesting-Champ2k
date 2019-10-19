@@ -91,4 +91,7 @@ class FractionTest(unittest.TestCase):
             Fraction({})
         with self.assertRaises(TypeError):
             Fraction("Hello")
+
+if __name__ == '__main__':
+     unittest.main(verbosity=2)
         
